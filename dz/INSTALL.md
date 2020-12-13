@@ -1,8 +1,8 @@
-#### Установка borgbackup.
+## Установка borgbackup.
 
-1. Хост `backup_server`.
+### 1. Хост `backup_server`.
 
-1.1. Установим borgbackup на хост `backup_server`.
+#### 1.1. Установим borgbackup на хост `backup_server`.
 
 ```
 [root@backup-server ~]# yum install -y epel-release
