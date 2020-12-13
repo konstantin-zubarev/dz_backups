@@ -3,8 +3,8 @@
 #### 1. Хост `backup_server`.
 
 ```
-echo 192.168.11.101 backup-server.mydomen.local backup-server >>/etc/hosts
-echo 192.168.11.102 client.mydomen.local client >>/etc/hosts
+[root@backup-server ~]# echo 192.168.11.101 backup-server.mydomen.local backup-server >>/etc/hosts
+[root@backup-server ~]# echo 192.168.11.102 client.mydomen.local client >>/etc/hosts
 ```
 Установим borgbackup на хост `backup_server`.
 
@@ -44,8 +44,8 @@ tmpfs           100M     0  100M   0% /run/user/0
 #### 2. Хост `client`
 
 ```
-echo 192.168.11.101 backup-server.mydomen.local backup-server >>/etc/hosts
-echo 192.168.11.102 client.mydomen.local client >>/etc/hosts
+[root@client ~]# echo 192.168.11.101 backup-server.mydomen.local backup-server >>/etc/hosts
+[root@client ~]# echo 192.168.11.102 client.mydomen.local client >>/etc/hosts
 ```
 
 Установим borgbackup на хост `client`.
