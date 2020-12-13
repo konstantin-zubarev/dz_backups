@@ -1,0 +1,11 @@
+[Unit]
+Description=Template Settings Service
+After=network.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/etc/init.d/borg-backup.sh
+
+[Install]
+WantedBy=multi-user.target
