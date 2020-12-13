@@ -1,8 +1,12 @@
-## Установка borgbackup.
+### Установка borgbackup.
 
-### 1. Хост `backup_server`.
+#### 1. Хост `backup_server`.
 
-#### 1.1. Установим borgbackup на хост `backup_server`.
+```
+echo 192.168.11.101 backup-server.mydomen.local backup-server >>/etc/hosts
+echo 192.168.11.102 client.mydomen.local client >>/etc/hosts
+```
+Установим borgbackup на хост `backup_server`.
 
 ```
 [root@backup-server ~]# yum install -y epel-release
@@ -37,14 +41,14 @@ tmpfs           100M     0  100M   0% /run/user/1000
 tmpfs           100M     0  100M   0% /run/user/0
 ```
 
-2. Хост `client`
+#### 2. Хост `client`
 
 ```
 echo 192.168.11.101 backup-server.mydomen.local backup-server >>/etc/hosts
 echo 192.168.11.102 client.mydomen.local client >>/etc/hosts
 ```
 
-1.1. Установим borgbackup на хост `client`.
+Установим borgbackup на хост `client`.
 
 ```
 [root@client ~]# yum install -y epel-release
